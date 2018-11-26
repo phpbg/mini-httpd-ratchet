@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "require": {
+        "phpbg/mini-httpd": "^0.2.2",
+        "cboden/ratchet": "^0.4.1"
+    }
+}

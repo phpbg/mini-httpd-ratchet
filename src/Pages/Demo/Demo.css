@@ -1,0 +1,34 @@
+[v-cloak] {
+    display: none;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-right, .message-left {
+    width: 80%;
+}
+
+.message-right {
+    color: #000;
+    background-color: #b7dfb8;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message-left {
+    color: #fff;
+    background-color: #6ec071;
+}
+
+form h1 span {
+    color: lightgrey;
+}
+
+#inputArea {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}

@@ -1,0 +1,28 @@
+<script>
+    var globalWsUrl = "<?=$this->wsUrl?>";
+</script>
+
+<div class="w3-container">
+    <h1>Mini-httpd with ratchet socket demo</h1>
+    <p>Open this in multiple browser and start chatting...</p>
+</div>
+
+<div class="w3-container">
+    <div id="myFirstReactPhpApp" v-cloak>
+        <div id="messages">
+            <h1>Messages</h1>
+            <div v-for="message in messages" class="w3-panel w3-border w3-round-xlarge w3-padding-16"
+                 v-bind:class="{'message-right': message.src=='me', 'message-left': message.src!='me'}">
+                {{message.message}}
+            </div>
+        </div>
+
+        <form @submit.prevent="sendMessage">
+            <h1>Send message <span>{{wsStatus}}</span></h1>
+            <div id="inputArea">
+                <input class="w3-input w3-border" type="text" v-model="message" autofocus>
+                <button class="w3-margin-left w3-button w3-green" type="submit" :disabled="disableSend">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
