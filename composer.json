@@ -5,7 +5,8 @@
         }
     },
     "require": {
-        "phpbg/mini-httpd": "^0.2.2",
+        "php": ">=7.0",
+        "phpbg/mini-httpd": "^0.3",
         "cboden/ratchet": "^0.4.1"
     }
 }

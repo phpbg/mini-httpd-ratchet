@@ -35,13 +35,12 @@ class Server
             '/' => new Route(function () {
                 throw new RedirectException('/demo');
             }),
-            '/demo' => new Route(new Demo(), $phtmlRenderer),
+            '/demo' => new Route(new Demo("ws://localhost:{$wsPort}"), $phtmlRenderer),
         ];
 
         // Setup shared context
         $applicationContext = new ApplicationContext();
         $applicationContext->loop = $loop;
-        $applicationContext->options = ['wsUrl' => "ws://localhost:{$wsPort}"];
         $applicationContext->routes = $routes;
         $applicationContext->publicPath = __DIR__ . '/../public';
         $applicationContext->logger = new Console(LogLevel::DEBUG);
